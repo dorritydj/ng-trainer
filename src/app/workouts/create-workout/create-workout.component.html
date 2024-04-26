@@ -1,0 +1,10 @@
+<form [formGroup]="data" (submit)="onSubmit()">
+  <label for="name">
+    Name
+    <input id="name" pInputText formControlName="name" />
+  </label>
+  <small id="name-error">Required</small>
+
+  <br />
+  <p-button type="submit">Submit</p-button>
+</form>

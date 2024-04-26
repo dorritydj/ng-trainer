@@ -1,0 +1,16 @@
+{
+  "mocks": {
+    "mock": {
+      "server": {
+        "cors": {
+          "options": {
+            "preflightContinue": true
+          }
+        }
+      },
+      "collections": {
+        "selected": "base"
+      }
+    }
+  }
+}

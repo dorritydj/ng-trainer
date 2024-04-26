@@ -1,0 +1,10 @@
+[
+	{
+		"id": "base",
+		"routes": [
+			"trainer:id:success",
+			"trainer:id:clients:success",
+			"workouts:id:success"
+		]
+	}
+]

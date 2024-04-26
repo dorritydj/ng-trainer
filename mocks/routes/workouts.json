@@ -1,0 +1,115 @@
+[
+	{
+		"id": "workouts:id",
+		"url": "/api/workouts/:id",
+		"method": "GET",
+		"variants": [
+			{
+				"id": "success",
+				"type": "json",
+				"options": {
+					"status": 200,
+					"body": {
+						"name": "Squat Peak",
+						"warmup": [
+							{
+								"name": "Single Leg Hip Extensions",
+								"sets": 2,
+								"reps": 10,
+								"eachSide": true
+							},
+							{
+								"name": "Stability Ball Single Leg Curl",
+								"sets": 2,
+								"reps": 10,
+								"eachSide": true
+							},
+							{
+								"name": "Stability Ball Pot Stir",
+								"sets": 2,
+								"reps": 10
+							},
+							{
+								"name": "Squat Jumps",
+								"sets": 2,
+								"reps": 20
+							}
+						],
+						"lifts": [
+							{
+								"id": 1,
+								"name": "Back Squat",
+								"sets": 3,
+								"reps": 1,
+								"AMRAP": true,
+								"rpePercent": 100,
+								"weightInLbs": 300
+							},
+							{
+								"id": 2,
+								"name": "Single Leg Dumbbell RDL",
+								"sets": 3,
+								"reps": 10,
+								"eachSide": true,
+								"weightInLbs": 40,
+								"circuitWith": 3
+							},
+							{
+								"id": 3,
+								"name": "Lunge and Single Arm Press",
+								"sets": 3,
+								"reps": 10,
+								"eachSide": true,
+								"weightInLbs": [25, 30],
+								"circuitWith": 2
+							},
+							{
+								"id": 4,
+								"name": "Pull Up",
+								"sets": 3,
+								"reps": 10,
+								"circuitWith": 5
+							},
+							{
+								"id": 5,
+								"name": "Stability Ball Roll Backs",
+								"sets": 3,
+								"reps": 20,
+								"weightInLbs": 0,
+								"cicuitWith": 4
+							},
+							{
+								"id": 6,
+								"name": "Row Machine",
+								"sets": 3,
+								"distanceInMeters": 500
+							}
+						],
+						"cooldown": [
+							{
+								"name": "Pidgeon Stretch",
+								"durationInMinutes": 2,
+								"eachSide": true
+							},
+							{
+								"name": "Couch Stretch",
+								"durationInMinutes": 2,
+								"eachSide": true
+							},
+							{
+								"name": "Seated Pike Stretch",
+								"durationInMinutes": 2,
+								"eachSide": true
+							},
+							{
+								"name": "Calf Stretch",
+								"durationInMinutes": 2,
+								"eachSide": true
+							}
+						]
+					}
+				}
+			}
+		]
+	}
+]

@@ -1,0 +1,10 @@
+@if (curr_trainer(); as trn) {
+  <p-menubar [model]="menu_items">
+    <ng-template pTemplate="start">
+      <div class="avatar">
+        <p-avatar [label]="trainer_initials()" size="large"></p-avatar>
+        {{ trn.name }}
+      </div>
+    </ng-template>
+  </p-menubar>
+}

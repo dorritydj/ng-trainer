@@ -1,0 +1,15 @@
+<div class="clients">
+  @if (clients(); as all_clients) {
+    <p-tabMenu [model]="menu_items()">
+      <ng-template pTemplate="item" let-item>
+        <a [routerLink]="item.routerLink" class="p-menuitem-link client">
+          <span>{{ item.label }}</span>
+        </a>
+      </ng-template>
+    </p-tabMenu>
+  }
+</div>
+
+<div class="view">
+  <router-outlet></router-outlet>
+</div>
