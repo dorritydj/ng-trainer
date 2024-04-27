@@ -1,6 +1,6 @@
 [
 	{
-		"id": "trainer:id",
+		"id": "get:trainer:id",
 		"url": "/api/trainers/:id",
 		"method": "GET",
 		"variants": [
@@ -10,39 +10,74 @@
 				"options": {
 					"status": 200,
 					"body": {
-						"id": 1,
-						"name": "DUMMY TRAINER"
-					}
+            "details": {
+              "id": "trainer-1",
+						  "name": "DUMMY TRAINER"
+            },
+            "programs": [
+              {
+                "id": "program-1"
+              },
+              {
+                "id": "program-2"
+              },
+              {
+                "id": "program-3"
+              }
+            ],
+            "clients": [
+              {
+                "id": "client-1"
+              },
+              {
+                "id": "client-2"
+              },
+              {
+                "id": "client-3"
+              }
+            ],
+            "workouts": [
+              {
+                "id": "workout-1"
+              },
+              {
+                "id": "workout-2"
+              },
+              {
+                "id": "workout-3"
+              }
+            ]
+          }
 				}
-			}
+			},
+      {
+        "id": "error",
+        "type": "json",
+        "options": {
+          "status": 400
+        }
+      }
 		]
 	},
-	{
-		"id": "trainer:id:clients",
-		"url": "/api/trainers/:id/clients",
-		"method": "GET",
-		"variants": [
-			{
-				"id": "success",
-				"type": "json",
-				"options": {
-					"status": 200,
-					"body": [
-						{
-							"id": 1,
-							"name": "Danny Dorrity"
-						},
-						{
-							"id": 2,
-							"name": "Optimus Prime"
-						},
-						{
-							"id": 3,
-							"name": "Megatron"
-						}
-					]
-				}
-			}
-		]
-	}
+  {
+    "id": "update:trainer:id",
+    "url": "/api/trainer/:id",
+    "method": "UPDATE",
+    "variants": [
+      {
+        "id": "success",
+        "type": "json",
+        "options": {
+          "status": 200
+        }
+      },
+      {
+        "id": "error",
+        "type": "json",
+        "options": {
+          "status": 400
+        }
+      }
+    ]
+  }
 ]

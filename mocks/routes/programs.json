@@ -1,0 +1,171 @@
+[
+  {
+    "id": "get:program:id",
+    "url": "/api/program/:id",
+    "method": "GET",
+    "variants": [
+      {
+        "id": "success",
+        "type": "json",
+        "options":{
+          "status": 200,
+          "body": {
+            "details": {
+              "name": "Big Booty Mix Vol 2"
+            },
+            "warmup": [
+              {
+                "id": "lift-1"
+              },
+              {
+                "id": "lift-2"
+              },
+              {
+                "id": "lift-3"
+              },
+              {
+                "id": "lift-4"
+              }
+            ],
+            "primary": [
+              {
+                "id": "lift-5"
+              }
+            ],
+            "supplementary": [
+              {
+                "id": "lift-6",
+                "circuit": [
+                  {
+                    "id": "lift-7"
+                  }
+                ]
+              },
+              {
+                "id": "lift-7",
+                "circuit": [
+                  {
+                    "id": "lift-6"
+                  }
+                ]
+              }
+            ],
+            "auxillary": [
+              {
+                "id": "lift-8",
+                "circuit": [
+                  {
+                    "id": [
+                      "lift-9",
+                      "lift-10"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "lift-9",
+                "circuit": [
+                  {
+                    "id": [
+                      "lift-8",
+                      "lift-10"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "lift-10",
+                "cicruit": [
+                  {
+                    "id": [
+                      "lift-8",
+                      "lift-9"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "cooldown": [
+              {
+                "id": "lift-11"
+              },
+              {
+                "id": "lift-12"
+              },
+              {
+                "id": "lift-13"
+              },
+              {
+                "id": "lift-14"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "error",
+        "type": "json",
+        "options": {
+          "status": 400
+        }
+      }
+    ]
+  },
+  {
+    "id": "post:trainer:program",
+    "url": "/api/trainer/:id/program/",
+    "method": "POST",
+    "variants": [
+      {
+        "id": "success",
+        "options": {
+          "status": 200
+        }
+      },
+      {
+        "id": "error",
+        "options": {
+          "status": 400
+        }
+      }
+    ]
+  },
+  {
+    "id": "post:trainer:program",
+    "url": "/api/trainer/:id/program/",
+    "method": "UPDATE",
+    "variants": [
+      {
+        "id": "success",
+        "options": {
+          "status": 200
+        }
+      },
+      {
+        "id": "error",
+        "options": {
+          "status": 400
+        }
+      }
+    ]
+  },
+  {
+    "id": "post:trainer:program",
+    "url": "/api/trainer/:id/program/",
+    "method": "DELETE",
+    "variants": [
+      {
+        "id": "success",
+        "options": {
+          "status": 200
+        }
+      },
+      {
+        "id": "error",
+        "options": {
+          "status": 400
+        }
+      }
+    ]
+  }
+]

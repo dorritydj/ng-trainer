@@ -2,8 +2,9 @@
 	{
 		"id": "base",
 		"routes": [
-			"trainer:id:success",
-			"trainer:id:clients:success",
+			"get:trainer:id:success",
+			"update:trainer:id",
+      "get:program:id",
 			"workouts:id:success"
 		]
 	}
