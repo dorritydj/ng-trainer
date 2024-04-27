@@ -4,7 +4,7 @@ import {
 	HttpTestingController,
 } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { TrainerService } from './trainer.service';
+import { type Trainer, TrainerService } from './trainer.service';
 
 describe('TrainerService', () => {
 	let service: TrainerService;
@@ -36,6 +36,17 @@ describe('TrainerService', () => {
 		httpController.expectOne({
 			url: '/api/trainers/1/clients',
 			method: 'GET',
+		});
+	});
+
+	it('should make a request to update the trainer information', () => {
+		const trainer: Partial<Trainer> = {
+			id: '1',
+		};
+		service.updateTrainer(trainer).subscribe();
+		httpController.expectOne({
+			url: '/api/trainers/1',
+			method: 'POST',
 		});
 	});
 });
